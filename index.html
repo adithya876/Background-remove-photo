@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Background Remover</title>
+    <link rel="icon" href="/background-removed.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Background Remover</h1>
+
+      <div class="instructions">
+        <h2>How to use:</h2>
+        <ol>
+          <li>
+            Upload an image by clicking on the upload area or dragging and
+            dropping a file
+          </li>
+          <li>
+            Select the background color you want to remove using the color
+            picker
+          </li>
+          <li>
+            Adjust the tolerance to fine-tune how much of the color is removed
+          </li>
+          <li>Click "Remove Background" to process the image</li>
+          <li>Download the result when you're satisfied</li>
+        </ol>
+      </div>
+
+      <div id="uploadArea" class="upload-area">
+        <p>Click to select an image or drag and drop here</p>
+        <input
+          type="file"
+          id="fileInput"
+          accept="image/*"
+          style="display: none"
+        />
+      </div>
+
+      <div class="controls" id="controls" style="display: none">
+        <div>
+          <label for="colorPicker"
+            >Background Color to Remove:
+            <span id="colorPreview" class="color-preview"></span
+          ></label>
+          <input type="color" id="colorPicker" value="#00ff00" />
+        </div>
+
+        <div>
+          <label for="tolerance"
+            >Color Tolerance: <span id="toleranceValue">30</span></label
+          >
+          <input type="range" id="tolerance" min="0" max="100" value="30" />
+        </div>
+
+        <button id="removeBtn" disabled>Remove Background</button>
+        <button id="downloadBtn" disabled>Download Result</button>
+        <button id="resetBtn">Upload New Image</button>
+      </div>
+
+      <div class="image-previews" id="imagePreviews" style="display: none">
+        <div class="image-preview">
+          <h3>Original Image</h3>
+          <canvas id="originalCanvas"></canvas>
+        </div>
+        <div class="image-preview">
+          <h3>Result</h3>
+          <canvas id="resultCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+
+    <!-- Add Your Direct Link Here -->
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          window.open("https://phoampor.top/4/9110172", "_blank");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
